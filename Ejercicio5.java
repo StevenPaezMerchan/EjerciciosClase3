@@ -24,15 +24,6 @@ public class Ejercicio5 {
         }
 
         entrada.close();
-        
-        /*if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u' ) {
-            System.out.println("La letra "+ letra +" es una vocal");
-            
-        }else{
-            System.out.println("La letra "+ letra +" es una consonante");
-        }
-
-        entrada.close();*/
 
     }
 }

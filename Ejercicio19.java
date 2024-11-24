@@ -10,7 +10,7 @@ public class Ejercicio19 {
         System.out.println("Ingrese un numero: ");
         int number = scanner.nextInt();
 
-        int operation = number + Math.
+        int operation = number + Math;
 
         scanner.close();
     }

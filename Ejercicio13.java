@@ -13,12 +13,14 @@ public class Ejercicio13 {
 
     public static void arriveLate(Scanner scanner){
 
+        
         System.out.println("Ingrese el numero del hermano mayor: ");
         int olderBrother = scanner.nextInt();
         System.out.println("Ingrese el numero del hermano del medio: ");
         int middleBrother = scanner.nextInt();
         System.out.println("Ingrese el numero del hermano menor: ");
         int youngerBrother = scanner.nextInt();
+
         int option = 0;
 
         switch (option) {
