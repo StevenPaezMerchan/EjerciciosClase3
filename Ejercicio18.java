@@ -4,32 +4,40 @@ import java.util.Random;
 public class Ejercicio18 {
     
     public static void main(String[] args) {
-        
-       // Scanner scanner = new Scanner(System.in);
-
-        writeNumbers();
-        addPositives(0);
-        
-    }
-
-    public static void writeNumbers(){
-
-        
-        Random random = new Random();
-        int positiveSume = 0;
-        for (int i = 0; i < 120; i++) {
-            System.out.println(random.nextInt(201) - 100);
-        
-            positiveSume ++;
-        }
     
-    }
+       Random random = new Random();
+       //Almacenar los 120 numeros a generar en un arreglo
+       int [] numbers = new int [120];
+       int positiveSume = 0;
+       int positiveCounter = 0;
+       int negativeSume = 0;
+       int negativeCounter = 0;
+       int ceroCounter = 0;
 
-    public static void addPositives(int positiveSume){
+       for (int i = 0; i < 120; i++) {
+           numbers[i] = random.nextInt(201) - 100;
+           System.out.println(numbers[i]);
+       }
 
-        if ( positiveSume > 0) {
-            System.out.println("La suma de los numeros es: "+positiveSume);
+       for (int i = 0; i < numbers.length; i++) {
+        if (numbers[i] > 0) {
+            positiveSume += numbers[i];
+            positiveCounter++;
+
+        }else if (numbers[i] < 0) {
+            negativeSume += numbers[i];
+            negativeCounter++;
+
+        }else{
+            ceroCounter++;
         }
-    }
+        
+       }
+       System.out.println("La suma de los numeros positivos es: "+positiveSume);
+       System.out.println("La suma de los numeros negativos es: "+negativeSume);
+       System.out.println("La cantidad de ceros es: "+ceroCounter);
+       System.out.println("Media de los numeros positivos: "+ positiveSume / positiveCounter);
+       System.out.println("Media de los numeros negativos: "+ negativeSume / negativeCounter);
+    } 
 
 }
