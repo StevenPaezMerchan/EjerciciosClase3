@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.Math;
 
 public class Ejercicio19 {
     
@@ -9,11 +8,20 @@ public class Ejercicio19 {
 
         System.out.println("Ingrese un numero: ");
         int number = scanner.nextInt();
-
-        int operation = number + Math;
-
         scanner.close();
+
+        for (int i = 0; i < number; i++) {
+            System.out.println("Fibonacci: "+fibonnaci(i));
+        }
     }
 
+    public static int fibonnaci(int number){
+
+        if (number ==0 || number == 1) {
+            return number;
+            
+        }else
+            return fibonnaci(number-1)+fibonnaci(number-2);
+    }
     
 }

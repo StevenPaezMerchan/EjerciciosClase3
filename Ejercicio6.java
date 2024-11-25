@@ -21,8 +21,6 @@ public class Ejercicio6{
         else{
             System.out.printf("El numero %d NO ES DIVISIBLE por 2 y 7", num);
         }
-
         entrada.close();
-        
     }
 }

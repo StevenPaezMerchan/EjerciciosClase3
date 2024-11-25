@@ -6,37 +6,28 @@ public class Ejercicio13 {
         
         Scanner scanner = new Scanner(System.in);
 
-        arriveLate(scanner);
+        findBrother(scanner);
 
         scanner.close();
     }
 
-    public static void arriveLate(Scanner scanner){
+    public static void findBrother(Scanner scanner){
+        int youngerBrother = 3;
 
-        
-        System.out.println("Ingrese el numero del hermano mayor: ");
+        System.out.println("Ingrese el numero de los hermanos que llegan a tiempo: ");
         int olderBrother = scanner.nextInt();
-        System.out.println("Ingrese el numero del hermano del medio: ");
         int middleBrother = scanner.nextInt();
-        System.out.println("Ingrese el numero del hermano menor: ");
-        int youngerBrother = scanner.nextInt();
 
-        int option = 0;
-
-        switch (option) {
-            case 1:
-            case 2:
-            System.out.println("3");
-                break;
-        
-            case 3:
-            System.out.println("Usted es el hermano que va llegar tarde");
-                break;
-
-            default:
-            System.out.println("Numero invalido");
-                break;
+        if (olderBrother != 1 && middleBrother != 2) {
+            System.out.println("Numero invalido!");
+        }else if (olderBrother == middleBrother) {
+            System.out.println("Los numeros digitados son iguales");
+            
+        }else if (olderBrother < middleBrother && middleBrother < youngerBrother) {
+            System.out.println(youngerBrother); 
+        }else{
+            System.out.println("Numero invalido!");
         }
-
     }
+
 }
